@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "target": "es2020",
+      "module": "CommonJS",
+      "moduleResolution": "Node",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "skipDefaultLibCheck": true,
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "react",
+      "baseUrl": "./src",
+      "paths": {
+        "*": ["types/*"]
+      }
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"]
+  }
+  
