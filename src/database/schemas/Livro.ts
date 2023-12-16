@@ -11,10 +11,6 @@ const Livro = new mongoose.Schema({
     type: String,
     require: true,
   },
-  version: {
-    type: String,
-    require: true,
-  },
   bookCover: {
     type: String,
     require: true,
