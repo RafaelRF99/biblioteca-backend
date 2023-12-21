@@ -15,7 +15,7 @@ class LivroController {
     }
 
     async create(req: Request, res: Response) {
-        const { title, author, bookCover, lauch, createAt } = req.body;
+        const { title, author, local, lauch, createAt } = req.body;
 
         try {
             const titleExists = await Livro.findOne({title});
@@ -30,7 +30,7 @@ class LivroController {
             const livro = await Livro.create({
                 title,
                 author,
-                bookCover,
+                local,
                 lauch,
                 createAt
             });
