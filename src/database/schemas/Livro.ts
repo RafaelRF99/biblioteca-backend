@@ -15,6 +15,14 @@ const Livro = new mongoose.Schema({
     type: String,
     require: true,
   },
+  category: {
+    type: String,
+    require: true,
+  },
+  bookCover: {
+    type: String,
+    require: true,
+  },
   lauch: {
     type: Date,
     require: true,
