@@ -82,5 +82,16 @@ class LivroController {
             return res.status(500).send({ error: "Falha ao excluir o livro", message: error });
         }
     }
+
+    async filterCategory(req: Request, res: Response) {
+        try {
+            const { category } = req.query;
+
+            const livros = await Livro.find({category});
+            return res.json(livros);
+    } catch (error) {
+        return res.status(500).send({ error: "Falha ao buscar livros por categoria", message: error });
+    }
+    }
 }
 export default new LivroController;
