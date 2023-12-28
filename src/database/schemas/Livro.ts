@@ -27,7 +27,7 @@ const Livro = new mongoose.Schema({
     type: String,
     require: true,
   },
-  lauch: {
+  launch: {
     type: Date,
     require: true,
   },
