@@ -20,6 +20,13 @@ class LivroController {
         try {
             const titleExists = await Livro.findOne({title});
 
+            if(!title || !author || !description || !local || !category || !bookCover || !launch || !createAt) {
+                return res.status(400).json({
+                    error: "Informações inválidas enviadas",
+                    message: "Algum valor não foi identificado"
+                })
+            }
+
             if(titleExists) {
                 return res.status(400).json({
                     error: "Algo de errado aconteceu",
