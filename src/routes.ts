@@ -7,8 +7,8 @@ const routes = Router();
 
 routes.get("/livro", Livrocontroller.getAll);
 routes.post("/livro", UserAdmin.verifyJWT, Livrocontroller.create);
-routes.put("/livro/:id", Livrocontroller.edit);
-routes.delete("/livro/:id", Livrocontroller.delete);
+routes.put("/livro/:id", UserAdmin.verifyJWT, Livrocontroller.edit);
+routes.delete("/livro/:id", UserAdmin.verifyJWT, Livrocontroller.delete);
 routes.get("/livro/filter", Livrocontroller.filterCategory);
 
 routes.post("/admin", UserAdmin.valid);
