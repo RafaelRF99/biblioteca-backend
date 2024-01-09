@@ -25,7 +25,7 @@ class UserAdmin {
     async valid(req: Request, res: Response) {
 
         try {
-            if (req.body.email === 'admin@hotmail.com' && req.body.pass === 'Goku') {
+            if (req.body.email === process.env.login && req.body.pass === process.env.pass) {
                 const token = jwt.sign({ adminId: 1 }, SECRET, { expiresIn: 3000 });
 
                 return res.json({ auth: true, token });
