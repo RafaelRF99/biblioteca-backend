@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(cors());
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const user = process.env['USER'];
 const pass = process.env['PASS'];
 
@@ -20,7 +20,7 @@ app.use(routes)
 
 // Rodar Backend
 app.listen(PORT, () => {
-  console.log('Backend rodando...');
+  console.log('Backend rodando...', PORT);
 });
 
 // Ligação ao MongoDB
