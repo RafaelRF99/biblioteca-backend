@@ -12,6 +12,7 @@ routes.delete("/livro/:id", UserAdmin.verifyJWT, Livrocontroller.delete);
 routes.get("/livro/filter", Livrocontroller.filterCategory);
 
 routes.post("/admin", UserAdmin.valid);
+routes.post("/admin/create", UserAdmin.create);
 
 
 

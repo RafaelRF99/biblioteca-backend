@@ -5,10 +5,10 @@ const Admin = new mongoose.Schema({
     type: String,
     require: true,
   },
-  pass: {
+  password: {
     type: String,
     require: true,
   },
 });
 
-export default mongoose.model('Admin', Admin);
+export default mongoose.model('AdminBiblioteca', Admin);
